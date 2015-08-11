@@ -8,15 +8,12 @@ var DonutShop = function(locationName, avgMin, avgMax, avgPerCustomer) {
   this.avgPerCustoemr = avgPerCustomer;
   this.myArray = [];
   this.total = 0;
-}
 
 
-DonutShop.prototype.customers = function() {
+DonutShop.prototype.nutPerHour = function() {
 this.total = this.myArray
 this.myArray = Math.floor(Math.random() * (this.avgMax-this.avgMin + 1) + (this.avgMin * this.avgPerCustomer));
-for(var i = 0; i < 11; i++)
-
-
+}
 
 var downtown = new DonutShop('Downtown', 8, 43, 4.50);
 var capitolHill = new DonutShop('Capitol Hill', 4, 37, 2.00);
@@ -26,6 +23,6 @@ var ballard = new DonutShop('Ballard', 8, 58, 3.75);
 
 }
 
-
+nutPerHour();
 
 
