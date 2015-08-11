@@ -2,18 +2,43 @@
 
 
 var DonutShop = function(locationName, avgMin, avgMax, avgPerCustomer) {
-  this.locationName = locationName
+  this.locationName = locationName;
   this.avgMin = avgMin;
   this.avgMax = avgMax;
-  this.avgPerCustoemr = avgPerCustomer;
-  this.myArray = [];
-  this.total = 0;
-
+  this.avgPerCustomer = avgPerCustomer;
 
 DonutShop.prototype.nutPerHour = function() {
-this.total = this.myArray
-this.myArray = Math.floor(Math.random() * (this.avgMax-this.avgMin + 1) + (this.avgMin * this.avgPerCustomer));
-}
+  this.totalSales = 0;
+  this.hourlyNutArray = [];
+  for(var i = 0; i < 12; i++) {
+  this.hourlyNutArray.push(Math.floor((Math.random() * (this.avgMax-this.avgMin + 1) + this.avgMin) * this.avgPerCustomer));
+  this.totalSales = this.totalSales + this.hourlyNutArray[i];
+  }
+
+return this.hourlyNutArray;
+  };
+
+DonutShop.prototype.render = function () {
+  var getTable = document.getElementById('donuttable');
+  var newRow = document.createElement('tr');
+
+  newRow.id = this.locationName;
+  newRow.innerHTML = this.locationName;
+  getTable.appendChild(newRow);
+  this.nutPerHour();
+
+  for(var i = 0; i < 12; i++) {
+    var newCell = document.createElement('td');
+    newCell.innerHTML = this.hourlyNutArray[i];
+    newRow.appendChild(newCell);
+  };
+
+  var newCell = document.createElement('td');
+  newCell.innerHTML = this.totalSales;
+  newRow.appendChild(newCell);
+  };
+
+};
 
 var downtown = new DonutShop('Downtown', 8, 43, 4.50);
 var capitolHill = new DonutShop('Capitol Hill', 4, 37, 2.00);
@@ -21,8 +46,23 @@ var southLakeUnion= new DonutShop('South Lake Union', 9, 23, 6.33);
 var wedgewood = new DonutShop('Wedgewood', 2, 28, 1.25);
 var ballard = new DonutShop('Ballard', 8, 58, 3.75);
 
-}
+downtown.nutPerHour();
+downtown.render();
 
-nutPerHour();
+capitolHill.nutPerHour();
+capitolHill.render();
+
+southLakeUnion.nutPerHour();
+southLakeUnion.render();
+
+wedgewood.nutPerHour();
+wedgewood.render();
+
+ballard.nutPerHour();
+ballard.render();
+
+
+
+
 
 
