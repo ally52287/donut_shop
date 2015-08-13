@@ -1,5 +1,52 @@
 
+/*Table of Contents
+It will flow down in the same way the html does
+
+body
+h1
+p1
+h2
+p2
+table
+p3
+event
+*/
+
+#whole
+{
+  background-color: #75b08a;
+}
 
 #title
 {
-  color: blue;}
+font-family: 'Lobster', Arial;
+color: #22475e;
+font-size: 70px;
+}
+
+.para
+{
+  font-family: 'Droid Serif', Serif;
+  font-size: 20px;
+}
+
+#donuttable
+{
+  background-color: #f0e797;
+  font-family: 'PT Sans Narrow', Sans-Serif;
+  font-size: 20px;
+}
+
+#eventTitle
+{
+  font-family: Arial;
+  font-size: 25px;
+  color: #22475e;
+}
+
+.textBox
+{
+  font-family: Arial;
+  font-size: 20px;
+  color: #22475e;
+}

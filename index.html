@@ -3,13 +3,17 @@
 <head>
   <title>donutshop</title>
   <meta charset ="UTF-8">
-  <link href="style.css" type="text/css" ref="style">
+  <link href="style.css" type="text/css" rel="stylesheet">
+  <link href='http://fonts.googleapis.com/css?family=Lobster' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=Droid+Serif' rel='stylesheet' type='text/css'>
+  <link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700' rel='stylesheet' type='text/css'>
 </head>
-<body>
-  <h1 id="title">Donut Imporium</h1>
-    <p>Thank you for visiting our delightful doughnut wedsite.</p>
+
+<body id="whole">
+  <h1 id="title">Doughnut Emporium!</h1>
+    <p id="one" class="para">Thank you for visiting our delightful doughnut wedsite.</p>
         <h2>About Us!</h2>
-          <p>We specialize in a variety of doughnuts great for any occasion. Here you can see a table of our wonderful locations. It shows our daily production values broken down into hourly increment. If you don't see your favorite location please feel free to add it into the table.</p>
+          <p id="two" class="para">We specialize in a variety of doughnuts great for any occasion. Here you can see a table of our wonderful locations. It shows our daily production values broken down into hourly increment. If you don't see your favorite location please feel free to add it into the table.</p>
 
   <table id="donuttable" style= "border: solid 5px black">
     <tr>
@@ -30,17 +34,16 @@
     </tr>
   </table>
 
+    <p id="eventTitle">Additional Locations:</p>
 
-      <p>Additional Locations</p>
       <form id="events">
-
-        <label for "addloc">Location</label>
+        <label for "addloc" id="loc" class="textBox">Location</label>
         <input id="locName" name="addloc" type="text">
-        <label for "min">Min. Customers Per Hour</label>
+        <label for "min" id="mn" class="textBox">Min. Customers Per Hour</label>
         <input id="minCus" name="min" type="text">
-        <label for "max">Max. Customers Per Hour</label>
+        <label for "max" id="mx" class="textBox">Max. Customers Per Hour</label>
         <input id= "maxCus" name="max" type="text">
-        <label for "ave">Average Per Customer</label>
+        <label for "ave" id="av" class="textBox">Average Per Customer</label>
         <input id="avePerCus" name="ave" type="text">
       </form>
 
@@ -48,14 +51,6 @@
 
 
 <script src = "mainjsdoshop"></script>
-
-
-
-
-
-
-
-
 
 
 </body>
