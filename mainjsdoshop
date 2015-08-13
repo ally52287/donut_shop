@@ -8,11 +8,10 @@ var DonutShop = function(locationName, avgMin, avgMax, avgPerCustomer) {
 DonutShop.prototype.nutPerHour = function() {
   this.totalSales = 0;
   this.hourlyNutArray = [];
-  for(var i = 0; i < 12; i++) {
-  this.hourlyNutArray.push(Math.floor((Math.random() * (this.avgMax-this.avgMin + 1) + this.avgMin) * this.avgPerCustomer));
-  this.totalSales = this.totalSales + this.hourlyNutArray[i];
+    for(var i = 0; i < 12; i++) {
+    this.hourlyNutArray.push(Math.floor((Math.random() * (this.avgMax-this.avgMin + 1) + this.avgMin) * this.avgPerCustomer));
+    this.totalSales = this.totalSales + this.hourlyNutArray[i];
   }
-
 return this.hourlyNutArray;
   };
 
@@ -48,8 +47,6 @@ var ballard = new DonutShop('Ballard', 8, 58, 3.75);
 var pull = document.getElementById('newLoc');
 pull.addEventListener('click', function(event) {
   event.preventDefault();
-  console.log('the click works');
-
   var newShop = document.getElementById('locName').value;
   var min = parseInt(document.getElementById('minCus').value);
   var max = parseInt(document.getElementById('maxCus').value);
@@ -58,19 +55,6 @@ pull.addEventListener('click', function(event) {
   Shop.table();
 
 });
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 downtown.nutPerHour();
 downtown.table();
@@ -86,9 +70,3 @@ wedgewood.table();
 
 ballard.nutPerHour();
 ballard.table();
-
-
-
-
-
-
