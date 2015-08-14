@@ -3,18 +3,30 @@
 It will flow down in the same way the html does
 
 body
+image1
 h1
+h2
 p1
+image2
 h2
 p2
 table
-p3
+image3
 event
+image4
 */
-
 #whole
 {
+  z-index: 10;
   background-color: #75b08a;
+  text-align: center;
+}
+
+#uniKitty
+{
+  padding: 2%;
+  width: 60%;
+  margin: 4%;
 }
 
 #title
@@ -22,12 +34,51 @@ event
 font-family: 'Lobster', Arial;
 color: #22475e;
 font-size: 70px;
+z-index: 10;
+position: fixed;
+top: 0px;
+left: 0px;
+margin: 1%;
+width: 100%;
+background-color: #f7e967;
+text-align: center;
 }
 
-.para
+#words
+{
+font-family: 'Droid Serif', Serif;
+  font-size: 20px;
+  z-index: 10;
+  padding: 1%;
+  margin: 1%;
+  width: 25%;
+  float: left;
+  display: inline;
+  border: 0%;
+}
+
+#uniDonut
+{
+  z-index: 10;
+  padding: 1%;
+  margin: 1%;
+  width: 25%;
+  float: center;
+  display: inline;
+  border: 0%;
+}
+
+#words2
 {
   font-family: 'Droid Serif', Serif;
   font-size: 20px;
+  z-index: 10;
+  padding: 1%;
+  margin: 1%;
+  width: 25%;
+  float: right;
+  display: inline;
+  border: 0%;
 }
 
 #donuttable
@@ -35,18 +86,25 @@ font-size: 70px;
   background-color: #f0e797;
   font-family: 'PT Sans Narrow', Sans-Serif;
   font-size: 20px;
+  width: 70%;
+  margin: 15%;
+  float: left;
+  right: 20%;
+
 }
 
-#eventTitle
-{
-  font-family: Arial;
-  font-size: 25px;
-  color: #22475e;
-}
-
-.textBox
+#events
 {
   font-family: Arial;
   font-size: 20px;
   color: #22475e;
+  background-color: #ff8598;
+  float: left;
+  margin: 3%;
+}
+
+#kittyDo
+{
+  float: left;
+  top: 2%;
 }
